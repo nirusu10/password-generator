@@ -59,6 +59,8 @@ p {
 }
 
 .password {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   height: 40px;
   width: 210px;
   background-color: var(--bg-lighter);
