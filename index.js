@@ -100,6 +100,20 @@ generateButton.addEventListener('click', () => {
 
 const password1El = document.getElementById('password-1')
 const password2El = document.getElementById('password-2')
+const passwordElements = document.querySelectorAll('.password')
+
+passwordElements.forEach((passwordEl) => {
+  passwordEl.addEventListener('click', (e) => {
+    const password = e.target.textContent
+    navigator.clipboard.writeText(password)
+    e.target.textContent = 'copied!'
+    e.target.classList.add('copied')
+    setTimeout(() => {
+      e.target.textContent = password
+      e.target.classList.remove('copied')
+    }, 1000)
+  })
+})
 
 function generatePassword() {
   let password = ''
@@ -115,4 +129,6 @@ function renderPasswords() {
   const password2 = generatePassword()
   password1El.textContent = password1
   password2El.textContent = password2
+  password1El.classList.add('clickable')
+  password2El.classList.add('clickable')
 }

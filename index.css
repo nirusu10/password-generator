@@ -33,6 +33,14 @@ button {
   color: var(--green);
 }
 
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  box-shadow: 0 0 4px white;
+}
+
 p {
   font-size: 1.25rem;
   font-weight: lighter;
@@ -69,4 +77,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.copied {
+  color: white;
+  background-color: var(--dark-green);
 }
